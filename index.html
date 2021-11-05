@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Конструктор визиток</title>
+  </head>
+  <body>
+    <div class="card-container">
+
+      <div class="card-fill">
+        <div class="card-fill__head">Конструктор визиток</div>
+        <form name="data_for_card" class="card-form">
+          <div class="form-field"><label class="form-label">Наименование организации</label><input class="form-control" type="text" name="company" value="ООО Ориентир"></div>
+          <div class="form-field"><label class="form-label">Фамилия, имя, отчество</label><input class="form-control" type="text" name="fio" value="Фёдоров Иван Семенович">
+            <div class="form-field__align">
+              <label> <input type="radio" name="fio_align" value="card-preview__fio__left"><span><img src="data_pictures/fio_left.svg" alt="fio_left"></span></label>
+              <label> <input type="radio" name="fio_align" value=" " checked><span><img src="data_pictures/fio_center.svg" alt="fio_center"></span></label>
+              <label> <input type="radio" name="fio_align" value="card-preview__fio__right"><span><img src="data_pictures/fio_right.svg" alt="fio_right"></span></label>
+            </div>
+            <div class="form-field__size">
+              <label> <input type="radio" name="fio_size" value="card-preview__fio__small"> <span>24px</span> </label>
+              <label> <input type="radio" name="fio_size" value=" " checked> <span>26px</span> </label>
+              <label> <input type="radio" name="fio_size" value="card-preview__fio__large"> <span>28px</span> </label>
+            </div>
+            <div class="form-field__color">
+              <div class="form-field__color__fio__black" onclick="Apply_color('form-field__color__fio__black', '#202020')"><div class="form-field__color__checked"> </div> </div>
+              <div class="form-field__color__fio__blue" onclick="Apply_color('form-field__color__fio__blue', '#3F88E8')"> </div>
+              <div class="form-field__color__fio__red" onclick="Apply_color('form-field__color__fio__red', '#E83F56')"> </div>
+              <div class="form-field__color__fio__green" onclick="Apply_color('form-field__color__fio__green', '#097A14')"> </div>
+              <div class="form-field__color__fio__yellow" onclick="Apply_color('form-field__color__fio__yellow', '#DCA40A')"> </div>
+              <div class="form-field__color__fio__purple" onclick="Apply_color('form-field__color__fio__purple', '#DC0AD5')"> </div>
+            </div>
+          </div>
+          <div class="form-field"><label class="form-label">Должность</label><input class="form-control" type="text" name="position" value="Менеджер по развитию">
+            <div class="form-field__align">
+              <label> <input type="radio" name="position_align" value="card-preview__position__left"> <span><img src="data_pictures/fio_left.svg" alt="position_left"></span> </label>
+              <label> <input type="radio" name="position_align" value=" " checked> <span><img src="data_pictures/fio_center.svg" alt="position_center"> </label>
+              <label> <input type="radio" name="position_align" value="card-preview__position__right"> <span><img src="data_pictures/fio_right.svg" alt="position_right"></span> </label>
+            </div>
+            <div class="form-field__size">
+              <label> <input type="radio" name="position_size" value="card-preview__position__small"> <span>14px</span> </label>
+              <label> <input type="radio" name="position_size" value=" " checked> <span>16px</span> </label>
+              <label> <input type="radio" name="position_size" value="card-preview__position__large"> <span>18px</span> </label>
+            </div>
+            <div class="form-field__color">
+              <div class="form-field__color__position__01" onclick="Apply_color('form-field__color__position__01', '#474747')"> <div class="form-field__color__checked"></div> </div>
+              <div class="form-field__color__position__02" onclick="Apply_color('form-field__color__position__02', '#202020')"> </div>
+              <div class="form-field__color__position__03" onclick="Apply_color('form-field__color__position__03', '#636363')"> </div>
+              <div class="form-field__color__position__04" onclick="Apply_color('form-field__color__position__04', '#9E9E9E')"> </div>
+              <div class="form-field__color__position__05" onclick="Apply_color('form-field__color__position__05', '#BBBBBB')"> </div>
+            </div>
+          </div>
+          <div class="form-field"><label class="form-label">Телефон</label><input class="form-control" type="text" name="phone" value="8(999) 123-45-67">
+            <br>
+            <div class="form-field__phoneMore" onclick="changePhone();"><img src="data_pictures/plus.svg" alt="add_phone"> Добавить еще один телефон</div>
+            <div class="form-field__additionalPhone hide"> <input class="form-control form-control__addPhone" type="text" name="additionalPhone" value="8(999) 123-45-67"> <span onclick="changePhone();"><img src="data_pictures/minus.svg" alt="delete phone"></span></div>
+          </div>
+          <div class="form-field"><label class="form-label">E-mail</label><input class="form-control" type="text" name="email" value="fedorov-is@orientir.org">
+            <label onclick="hideInput('card-preview__email', 'form-field__imgEmail');"> <img class="form-field__imgEmail" src="data_pictures/check.png" width="18px" alt="condition"> Отображать</label>
+          </div>
+          <div class="form-field"><label class="form-label">Адрес</label><input class="form-control" type="text" name="address" value="Иркутск, Байкальская, 421, оф. 12">
+            <label onclick="hideInput('card-preview__address', 'form-field__imgAddr');"> <img class="form-field__imgAddr" src="data_pictures/check.png" width="18px" alt="condition"> Отображать</label>
+        </div>
+          <div class="form-action"><button type="button" class="button button--primary" onclick="Apply(); set_align(); set_size();">Применить</button></div>
+        </form>
+      </div>
+
+      <div class="card-res">
+        <div class="card-preview">
+          <div class="card-preview__company">ООО Ориентир</div>
+          <div class="card-preview__fio">Фёдоров Иван Семенович</div>
+          <div class="card-preview__position">Менеджер по развитию</div>
+          <div class="card-preview__details detail">
+            <div class="card-preview__phone detail__item">8(999) 123-45-67</div>
+            <div class="card-preview__additionalPhone detail__item hide">8(999) 123-45-67</div>
+            <div class="card-preview__email detail__item">fedorov-is@orientir.org</div>
+            <div class="card-preview__address detail__item">Иркутск, Байкальская, 421, оф. 12</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  <script src="script.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,293 @@
+html, body
+{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body
+{
+  background: #ccc;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.card-container
+{
+  width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  height: 100%;
+}
+
+.card-fill
+{
+  background: #fff;
+  padding: 32px 15px;
+}
+
+.card-fill__head
+{
+  display: block;
+  font-size: 2em;
+  color: #707070;
+  margin-bottom: 30px;
+}
+
+.form-label
+{
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-field
+{
+  margin-bottom: 15px;
+}
+
+.form-control
+{
+  margin-right: 25px;
+  background: #fff;
+  border: 1px solid #AAAAAABF;
+  border-radius: 2px;
+  padding: 4px 5px;
+  background-color: #fff;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.button
+{
+  border-radius: 32px;
+  padding: 8px 26px;
+}
+
+.button--primary
+{
+  background-color: #3F88E8;
+  border-color: #3F88E8;
+  color: #fff;
+}
+
+.card-preview
+{
+  background-color: #fff;
+  border-radius: 6px;
+  width: 445px;
+  height: 268px;
+  margin: 78px auto;
+  padding: 22px;
+  box-sizing: border-box;
+}
+
+.form-field__size, .form-field__align
+{
+  padding: 4px 0px;
+  display: inline;
+  border: 1px solid #AAAAAABF;
+  border-radius: 2px;
+}
+
+.form-field__align
+{
+  margin-right: 15px;
+}
+
+.form-field__size>label>span
+{
+  padding: 4px 5px;
+}
+
+.form-field__align>label>span
+{
+  padding: 4px 11px;
+}
+
+.form-field__size > label > input, .form-field__align > label > input
+{
+  display: none;
+}
+
+input:checked ~ span
+{
+  background-color: #bbb;
+}
+
+.form-field__phoneMore, .form-field__additionalPhone
+{
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 1em;
+}
+
+.form-control__addPhone
+{
+  margin-right: 7px;
+  width: 135px;
+}
+
+.form-field__phoneMore
+{
+  color: #707070;
+}
+
+.hide
+{
+  display: none;
+}
+
+.card-preview__company
+{
+  font-size: .7em;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.card-preview__fio
+{
+  font-size: 1.86em;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.card-preview__fio__left
+{
+  text-align: left;
+}
+
+.card-preview__fio__right
+{
+  text-align: right;
+}
+
+.card-preview__fio__small
+{
+  font-size: 1.7em;
+}
+
+.card-preview__fio__large
+{
+  font-size: 2em;
+}
+
+.form-field__color
+{
+  display: inline-block;
+  padding-top: 15px;
+}
+
+.form-field__color > div
+{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 25px;
+}
+
+.form-field__color__fio__black
+{
+  background: #202020;
+}
+
+.form-field__color__fio__blue
+{
+  background: #3F88E8;
+}
+
+.form-field__color__fio__red
+{
+  background: #E83F56;
+}
+
+.form-field__color__fio__green
+{
+  background: #097A14;
+}
+
+.form-field__color__fio__yellow
+{
+  background: #DCA40A;
+}
+
+.form-field__color__fio__purple
+{
+  background: #DC0AD5;
+}
+
+.form-field__color__position__01
+{
+  background: #474747;
+}
+
+.form-field__color__position__02
+{
+  background: #202020;
+}
+
+.form-field__color__position__03
+{
+  background: #636363;
+}
+
+.form-field__color__position__04
+{
+  background: #9E9E9E;
+}
+
+.form-field__color__position__05
+{
+  background: #BBBBBB;
+}
+
+.form-field__color__checked
+{
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 7px;
+  transform: translate(50%, 50%);
+}
+
+.card-preview__position
+{
+  font-size: 1.14em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.card-preview__position__left
+{
+  text-align: left;
+}
+
+.card-preview__position__right
+{
+  text-align: right;
+}
+
+.card-preview__position__small
+{
+  font-size: 1em;
+}
+
+.card-preview__position__large
+{
+  font-size: 1.28em;
+}
+
+.card-preview__details
+{
+  font-size: .86em;
+  margin-left: 200px;
+}
+
+.detail__item
+{
+  margin-bottom: 10px;
+}
